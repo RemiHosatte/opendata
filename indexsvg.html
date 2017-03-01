@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <style type="text/css">
+        body{font-family:serif;background-color:#F5F5F5;color:#415F77}
+
+        *{box-sizing:border-box}
+        .map{position:relative;overflow:hidden;background-color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);max-width:900px;margin:20px auto}
+        
+        .map__image svg{width:100%;height:650px}
+        .map__image polygon:hover, .map__image path:hover{fill:#415F77;stroke:#769cb5;stroke-width:1px;transition:fill .3s}
+
+        .map__image .is-active path
+        {fill:#FC5050}*/
+        .map__list{float:right;width:280px;border-left:1px solid #dbdbdb}
+       /* .map__list li,.map__list ul{margin:0;padding:0;list-style:none}
+        .map__list a{padding-left:10px;display:inline-block;height:30px;width:100%;line-height:30px;color:inherit;text-decoration:none;transition:.3s}
+        .map__list a.is-active{color:#FC5050;background-color:#f4f4f4}@media screen and (max-width:720px){.map__list{float:none;width:100%;border-left:1px solid #dbdbdb}.map__image{padding:10px;position:static;width:100%}}*/
+    </style>
+</head>
+<body>
+<div class="map" id="map">
+    <div class="map__image">
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1280 1024" style="enable-background:new 0 0 1280 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BEBEBE;stroke:#FEFFEB;stroke-width:2;}
+	.st1{fill:#BEBEBE;stroke:#FFFFFF;stroke-width:2;}
+</style>
+<g>
+	<path id="OUEST" class="st1" d="M218,616v-74l24-53l31-29h40.3l27.7-8l29,8l48-8l42,32l33-3l28-12l50.6,22.9L627,497l13-31l17,158
+		c0,0-44-7-50-8s-66-8-66-8v16c0,0-36,22-40,23s-40,13-40,13s-22,13-33,13s-42,0-50,0s-70-17-70-17s-19,5-24-2s-41-34-41-34L218,616
+		z"/>
+
+	<path id="SUD" class="st1" d="M849.3,641.5l144,51.8l-21.3,27l-20,23l13,24l-8-1l-24,1v16l-20,10l-29-2l-16-14l-16,10l5,22l-15.5,37l-11.5-7
+		l-11-27l-25-15l-43,15l-20-13l-27-11c0,0-51,0-56.5,0s16.5-9,16.5-9v-31l5-32l18,32c0,0,12-11,17-16s5-16,5-16l8,15l-8,27l22-6
+		l15.5-44l10.5-31l12-33.8l36-15.2L849.3,641.5"/>
+
+	<polygon id="NORD" class="st1" points="839,365 941,342 973,389 1085,462 1112,480 1065,512 1055,541 899,591 899,494.5 858,469 832,469 	"/>
+	
+	<path id="CENTRE" class="st1" d="M766,610l22.4-68l43.7-73h27.7l43.7,25.5V546v45l-7.5,33c-10.8,7.5-21.7,15-32.5,22.5
+		c-16.9-4.8-33.7-9.7-50.6-14.5L766,610z"/>
+
+	<polygon id="CENTREOUEST" class="st1" points="657,624 640,466 697,439 799,392 839,365 832,469 791,542 770,610 706,599 	"/>
+
+	<path id="EST" class="st1" d="M863.5,646.5l33.1-21.6l7-34l156.7-51.5l22.1,51.5l35.2,55.7l16.1,49.5c0,0-36.2,13.4-41.2,13.4
+		c-5,0-42.2,4.1-48.2,0c-6-4.1-36.2-26.8-36.2-26.8l-20.1-7.2V694L863.5,646.5z"/>
+
+	<path id="NORDOUEST" class="st1" d="M273,460l33-24l12-42l-5-28l-17.5-13l22.5-9l13-38l37-34l49-5l50-70l60,36v12l15,17l9,20l58,20l31-1l37,1v30
+		v36l-6,14l-17-3l6,17v25l24,10l13,8l-57,27l-6,21c0,0-9,10-15,10s-49-5-53-6s-42-21-45-22s-28,12-28,12l-33,3l-34-29l-56,5
+		c0,0-23-8-29-8s-32,10-35,10S273,460,273,460z"/>
+</g>
+</svg>
+
+      
+    </div>
+    <div class="map__list">
+        <ul>
+            <li><a href="http://google.com/?q=A" id="list-A">Alsace-Champagne-Ardenne-Lorraine</a></li>
+            <li><a href="http://google.com/?q=B" id="list-B">Aquitaine-Limousin-Poitou-Charentes</a></li>
+            <li><a href="http://google.com/?q=C" id="list-C">Auvergne-Rhône-Alpes</a></li>
+            <li><a href="http://google.com/?q=D" id="list-D">Bourgogne-Franche-Comté</a></li>
+            <li><a href="http://google.com/?q=E" id="list-E">Bretagne</a></li>
+            <li><a href="http://google.com/?q=F" id="list-F">Centre-Val de Loire</a></li>
+            <li><a href="http://google.com/?q=G" id="list-G">Corse</a></li>
+            <li><a href="http://google.com/?q=H" id="list-H">Île-de-France</a></li>
+            <li><a href="http://google.com/?q=I" id="list-I">Languedoc-Roussillon-Midi-Pyrénées</a></li>
+            <li><a href="http://google.com/?q=J" id="list-J">Nord-Pas-de-Calais-Picardie</a></li>
+            <li><a href="http://google.com/?q=K" id="list-K">Normandie</a></li>
+            <li><a href="http://google.com/?q=L" id="list-L">Pays-de-la-Loire</a></li>
+            <li><a href="http://google.com/?q=M" id="list-M">Provence-Alpes-Côte d'Azur</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
