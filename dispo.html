@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="liquidFillGauge.js" language="JavaScript"></script>
+    <style type="text/css">
+
+
+
+        body{
+            font-family:serif;background-color:#F5F5F5;color:#415F77
+        } 
+
+        *{
+            box-sizing:border-box
+        }
+
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+        * {margin:0; padding:0;
+        }
+
+        .gaugeDiv{
+        position: relative;
+          display: inline-block;
+          float: left;
+          width: 200px;
+        }
+          .gaugeDiv svg{
+          display: block;
+          margin: auto;
+          
+        }
+  .logo {
+            text-align:center;
+            margin-bottom: 50px;
+        }
+
+        body{
+            position:relative;
+            overflow:hidden;
+            background-color:#fff;
+            box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+               max-width:500px;
+            margin:auto;
+            height: 800px;}
+
+    </style>
+</head>
+<body>
+
+<div class="logo">
+        <img src="logo.png">
+    </div>
+<div class="gaugeDiv" id="g1">
+<svg id="fillgauge1" nclick="gauge1.update(NewValue());"></svg>
+</div>
+<div class="gaugeDiv" id="g2">
+<svg id="fillgauge2"  onclick="gauge2.update(NewValue());"></svg>
+</div>
+
+</body>
+<script>
+    
+    var config1 = liquidFillGaugeDefaultSettings();
+    config1.minValue= 0;
+    config1.maxValue= 500;
+    config1.textVertPosition = 0.5;
+    config1.waveAnimateTime = 1000;
+    config1.displayPercent = false;
+  var gauge1 = loadLiquidFillGauge("fillgauge1", 255, config1 );
+
+    var config1 = liquidFillGaugeDefaultSettings();
+    config1.minValue= 0;
+    config1.maxValue= 720;
+    config1.textVertPosition = 0.5;
+    config1.waveAnimateTime = 1000;
+    config1.displayPercent = false;
+  var gauge2 = loadLiquidFillGauge("fillgauge2", 480, config1 );
+   var config1 = liquidFillGaugeDefaultSettings();
+    config1.minValue= 0;
+    config1.maxValue= 242;
+    config1.textVertPosition = 0.5;
+    config1.waveAnimateTime = 1000;
+    config1.displayPercent = false;
+  var gauge3 = loadLiquidFillGauge("fillgauge3", 36, config1 );
+   var config1 = liquidFillGaugeDefaultSettings();
+    config1.minValue= 0;
+    config1.maxValue= 84;
+    config1.textVertPosition = 0.5;
+    config1.waveAnimateTime = 1000;
+    config1.displayPercent = false;
+  var gauge4 = loadLiquidFillGauge("fillgauge4", 52, config1 );
+</script>
+
+</html>

@@ -3,13 +3,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="liquidFillGauge.js" language="JavaScript"></script>
     <style type="text/css">
         body{font-family:serif;background-color:#F5F5F5;color:#415F77}
 
-        *{box-sizing:border-box}
-        .map{position:relative;overflow:hidden;background-color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);max-width:900px;margin:20px auto}
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
         
-        .map__image svg{width:100%;height:650px}
+        *{box-sizing:border-box}
+
+        .logo {
+            text-align:center;
+        }
+
+        .map{position:relative;
+            overflow:hidden;
+            background-color:#fff;
+            box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+            max-width:500px;
+            margin:auto;
+            height: 800px;
+        }
+        
+        .map__image svg{width:110%;height:500px
+        }
+        .map__image {
+            margin-left:-100px;
+        }
         .map__image polygon:hover, .map__image path:hover{fill:#415F77;stroke:#769cb5;stroke-width:1px;transition:fill .3s}
 
         .map__image .is-active path
@@ -21,7 +41,12 @@
     </style>
 </head>
 <body>
+
 <div class="map" id="map">
+
+    <div class="logo">
+        <img src="logo.png">
+    </div>
     <div class="map__image">
 
 
@@ -52,13 +77,16 @@
 
 	<path id="NORDOUEST" class="st1" d="M273,460l33-24l12-42l-5-28l-17.5-13l22.5-9l13-38l37-34l49-5l50-70l60,36v12l15,17l9,20l58,20l31-1l37,1v30
 		v36l-6,14l-17-3l6,17v25l24,10l13,8l-57,27l-6,21c0,0-9,10-15,10s-49-5-53-6s-42-21-45-22s-28,12-28,12l-33,3l-34-29l-56,5
-		c0,0-23-8-29-8s-32,10-35,10S273,460,273,460z"/>
+		c0,0-23-8-29-8s-32,10-35,10S273,460,273,460z" onclick="alert('click!')"/>
 </g>
 </svg>
 
       
     </div>
-    <div class="map__list">
+
+   <!-- 
+LIST DES ZONES A MODIFIER SI UTILITE
+   <div class="map__list">
         <ul>
             <li><a href="http://google.com/?q=A" id="list-A">Alsace-Champagne-Ardenne-Lorraine</a></li>
             <li><a href="http://google.com/?q=B" id="list-B">Aquitaine-Limousin-Poitou-Charentes</a></li>
@@ -75,7 +103,12 @@
             <li><a href="http://google.com/?q=M" id="list-M">Provence-Alpes-Côte d'Azur</a></li>
         </ul>
     </div>
+    -->
+
 </div>
 
 </body>
+<script>
+
+</script>
 </html>
